@@ -6,19 +6,38 @@
 
 <body>
 
-<article>
-<div class='post-body entry-content' id='post-body-3341786033321408246' itemprop='articleBody'>
-<div dir="rtl" style="text-align: right;" trbidi="on">
-<script src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"></script> <script src="https://cdn.jsdelivr.net/clappr.level-selector/latest/level-selector.min.js"></script> <script src="https://cdn.jsdelivr.net/gh/clappr/dash-shaka-playback@latest/dist/dash-shaka-playback.js"></script> <script src="https://cdn.jsdelivr.net/clappr.chromecast-plugin/latest/clappr-chromecast-plugin.js"></script>
-<div id="player"></div>
-<script>
-//<![CDATA[ 
-player=new Clappr.Player({source: "https://live.bongobd.com/hls/7Y3TPsBt3Ykjtl6kT46pNA/1617899197/ten_sports_2_hi/index.m3u8",
-plugins:[DashShakaPlayback,LevelSelector,ChromecastPlugin],parentId:"#player",width:"100%",height:"500",poster:"",hideMediaControl:!0,mediacontrol:{seekbar:"#007acc",buttons:"#007acc"},chromecast:{appId:"9DFB77C0",contentType:"video/mp4",media:{type:ChromecastPlugin.Movie,title:"yalla shoot 7sry",subtitle:"You won't get much closer to Skylining than this!"}},autoPlay:!0});
-//]]>
-</script></div>
-</div>
-</article>
+
+                        				<tr>
+                    <td colspan="7" style="padding-top: 10px; padding-bottom: 10px; border-top: solid thin #ccc">
+		<div  class="video-container" id="video-container" >
+			<script type="text/javascript" data-adel="atag" src="//acdcdn.com/script/atg.js" czid="13zrnvvp"></script><script>
+    				var player = new Clappr.Player({
+				source: "https://sec14.beintube.net/live/bein1/index.m3u8",
+				poster: "https://beinmatch.com/poster.png",
+        			baseUrl: "https://beinmatch.com",
+				autoPlay: "true",
+    				mediacontrol: {seekbar: "#2e87ff", buttons: "#FFFFFF"},
+				width: "100%",
+				plugins: {
+				"core": [LevelSelector]
+				},
+				hlsjsConfig: {
+				 xhrSetup: function(xhr, url) {
+				  xhr.withCredentials = false;
+				 }
+				},
+				maxBufferLength: "20",
+				parentId: "#video-container"});
+  				function resizePlayer(){
+    				var aspectRatio = 9/16,
+    				newWidth = document.getElementById("video-container").parentElement.offsetWidth,
+    				newHeight = 2 * Math.round(newWidth * aspectRatio/2);
+    				player.resize({width: newWidth, height: newHeight});
+ 				}
+  				resizePlayer();
+  				window.onresize = resizePlayer; 
+  				</script>                        </div>
+                    </td>
 
 </body>
 </html>
